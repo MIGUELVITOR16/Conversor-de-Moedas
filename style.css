@@ -11,8 +11,33 @@ body {
     background-color: #8A51FC;
 }
 
+.logo {
+    width: 230px;
+    display: block;
+    margin: 8px auto;
+}
+
 main {
     width: 375px;
     background-color: #F4F4F4;
     border-radius: 20px;
+    margin: 0 auto;
+    padding: 44px 24px 23px;
 }
+
+label {
+    color: #777777;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+select, input {
+    background: #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    height: 48px;
+    width: 100%;
+    margin-bottom: 24px;
+    padding-left: 18px;
+}
+
