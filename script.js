@@ -1,4 +1,5 @@
 const convertButton = document.querySelector(".convert-button")
+const currencySelect = document.querySelector("currency-select")
 
 function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
@@ -6,6 +7,7 @@ function convertValues() {
     const currencyValueToConverted = document.querySelector(".currency-value")
 
     const dolarToday = 5.2
+    const euroToday = 6.2
 
     const convertedValue = inputCurrencyValue / dolarToday
 
@@ -14,7 +16,10 @@ function convertValues() {
         currency:"BRL"
     }) .format(inputCurrencyValue)
 
-    currencyValueToConverted.innerHTML = convertedValue
+    currencyValueToConverted.innerHTML = new Intl.NumberFormat("en-US" , {
+        style:"currency" ,
+        currency:"USD"
+    }).format(convertedValue)
 
   
 }
