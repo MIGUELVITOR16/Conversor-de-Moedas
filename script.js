@@ -2,12 +2,21 @@ const convertButton = document.querySelector(".convert-button")
 
 function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
+    const currencyValueToConvert = document.querySelector(".currency-value-to-convert")
+    const currencyValueToConverted = document.querySelector(".currency-value")
 
     const dolarToday = 5.2
 
-    const convertdValue = inputCurrencyValue / dolarToday
+    const convertedValue = inputCurrencyValue / dolarToday
 
-    console.log(convertdValue)
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR" , {
+        style:"currency" , 
+        currency:"BRL"
+    }) .format(inputCurrencyValue)
+
+    currencyValueToConverted.innerHTML = convertedValue
+
+  
 }
 
 convertButton.addEventListener("click" , convertValues)
